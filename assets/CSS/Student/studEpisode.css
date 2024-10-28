@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+/* information about the episode */
+.main_elements .episode_info {
+  width: 92%;
+  margin: 2vh auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_elements .episode_info .episode_number {
+  font-family: "Reem Kufi";
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 72px;
+}
+
+.main_elements .episode_info .episode_genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_elements .episode_info .episode_genre p {
+  font-size: 22px;
+  border: 1px solid var(--mainblue);
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+  .main_elements .episode_info .episode_number {
+    font-size: 28px;
+  }
+  .main_elements .episode_info .episode_genre p {
+    font-size: 18px;
+  }
+  .panel .search_student input {
+    font-size: 18px;
+  }
+}
+
+/*
+ * First section: main (الرئيسية) 
+ */
+
+/* weekly program */
+.main-section .timetable .all_days {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.all_days .day_container,
+.all_stats .stat_container {
+  text-align: center;
+  padding: 10px 10px;
+  background: var(--whiteFFF);
+  border: 1px solid var(--mainblue);
+  border-radius: 20px;
+}
+
+.day_container .day,
+.stat_container .stat_data {
+  font-family: "Reem Kufi";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--mainblue);
+}
+
+.day_container .exact_time,
+.all_stats .stat_instance {
+  color: var(--mainblue);
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.day_container .time {
+  color: var(--black);
+}
+
+.day_container hr,
+.previous_episodes hr,
+.next_exams hr {
+  margin: 10px auto;
+  width: 80%;
+  background: var(--mainblue);
+}
+
+/* searchbar (student) */
+.panel .search_student {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 30px 10px 10px;
+  gap: 30px;
+  width: 100%;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+}
+
+.panel .search_student input {
+  border: none;
+  background: none;
+  font-size: 20px;
+  font-family: "Cairo", sans-serif;
+}
+
+.panel .search_student input:focus {
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .panel .search_student input {
+    font-size: 18px;
+  }
+}
+
+/* students list (table) */
+.main-section .students_list,
+.previous_episodes .sessions_list {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-gap: 10px;
+  overflow-x: scroll;
+}
+
+.main-section .students_list .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.main-section .students_list .head .box,
+.previous_episodes .sessions_list .head .box,
+.my_grades .grades_list .head .box {
+  background: var(--darkblue);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--whiteFFF);
+  padding: 10px;
+}
+
+.main-section .students_list .student .box,
+.previous_episodes .sessions_list .session .box,
+.my_grades .grades_list .exam .box {
+  background: var(--whiteFFF);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.main-section .students_list .box,
+.previous_episodes .sessions_list .box,
+.my_grades .grades_list .box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.previous_episodes .sessions_list .data_instance {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .main-section .students_list .head .box,
+  .previous_episodes .sessions_list .head .box,
+  .my_grades .grades_list .head .box {
+    font-size: 16px;
+    min-width: 128px;
+  }
+  .main-section .students_list .student .box,
+  .previous_episodes .sessions_list .session .box,
+  .my_grades .grades_list .exam .box {
+    font-size: 16px;
+    min-width: 128px;
+  }
+}
+
+/*
+ * Second section: previous episodes (أدائي في الحصص السابقة)
+ */
+
+/* general statistics */
+.previous_episodes .stats .all_stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.all_stats .stat_instance {
+  color: var(--black);
+}
+
+.stat_container hr {
+  margin: -10px auto -10px;
+  width: 70%;
+  background: var(--mainblue);
+}
+
+@media (max-width: 700px) {
+  .day_container .day,
+  .stat_container .stat_data {
+    font-size: 20px;
+  }
+  .all_stats .stat_instance {
+    font-size: 18px;
+  }
+}
+
+/* sessions list */
+.previous_episodes .sessions_list .row,
+.eps_reports .sessions_list .row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+/*
+ * Third section: exams
+ */
+.the_exam .an_exam .exam_question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 10px;
+  gap: 10px;
+}
+
+.the_exam .an_exam .exam_question .the_question,
+.the_exam .an_exam .exam_question label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  background: var(--whiteFFF);
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.the_exam .an_exam .exam_question .the_question {
+  border: 1px solid var(--darkblue);
+}
+
+.the_exam .an_exam .exam_question label p {
+  padding-right: 20px;
+}
+
+.the_exam .an_exam .exam_question input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+.next_exams .exams .all_exams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.next_exams .exams .all_exams .exam_title {
+  font-size: 22px;
+}
+.next_exams .exams .all_exams .exam_type {
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .next_exams .exams .all_exams {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .next_exams .exams .all_exams .exam_title {
+    font-size: 20px;
+  }
+  .next_exams .exams .all_exams .exam_type {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:350px) {
+  .next_exams .exams .all_exams {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*
+ * Fourth section: My grades
+ */
+
+/* ordering students buttons */
+.my_grades .order_students {
+  display: grid;
+  grid-template-columns: 28% 28%;
+  gap: 10px;
+}
+
+.my_grades .order_students .order_type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--mainblue);
+  border: 1px solid var(--mainblue);
+  border-radius: 20px;
+  padding: 10px 30px;
+  white-space: nowrap;
+}
+
+/* grades of exams */
+.my_grades .grades_list {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 10px;
+}
+.my_grades .grades_list .row {
+  display: grid;
+  grid-template-columns: 60% 38%;
+  grid-gap: 2%;
+}

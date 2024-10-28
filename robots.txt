@@ -1,0 +1,9 @@
+# If you would like to crawl GitHub contact us via yottamindco@gmail.com
+crawl-delay: 1
+
+
+User-agent: *
+
+Disallow: /*/includings
+Disallow: /*/js/
+Disallow: /*/authentication/

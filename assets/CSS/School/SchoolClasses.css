@@ -1,0 +1,130 @@
+.Classframe {
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--whiteFFF);
+  background-image: url(../../images/School/hala9a%20frame%20bg.png);
+  background-size: cover;
+  width: 90%;
+  border: 2px solid var(--mainblue);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 2% auto;
+}
+
+.Classframe:hover {
+  background-image: url(../../images/School/hovered%20hala9a%20frame%20bg.png);
+  transition: background-image 2s ease-in-out;
+}
+
+.upperTape {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input {
+  border: 1px solid var(--mainblue);
+  border-radius: 34px;
+  background-color: var(--whiteFFF);
+  font-size: 20px;
+  font-family: "Cairo";
+  height: fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+input:hover {
+  color: var(--whiteFFF);
+  background-color: var(--mainblue);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.Title {
+  padding-top: 10px;
+  font-size: 30px;
+  font-family: "Reem Kufi";
+  padding-bottom: 15px;
+  font-weight: normal;
+}
+
+.Classframe p {
+  font-size: 16px;
+  font-family: "Cairo";
+  padding-bottom: 15px;
+}
+
+.numEpisodes {
+  font-size: 20px;
+  font-family: "Cairo";
+  color: var(--mainblue);
+}
+
+.text {
+  max-width: 500px;
+  width: 70%;
+}
+
+/*inside Episode*/
+.attention {
+  width: 90%;
+  margin: 12px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.attention .attention-title {
+  display: flex;
+  justify-content: space-between;
+  background: var(--mainblue);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.attention .attention-title p {
+  font-weight: 700;
+  font-size: 22px;
+  padding: 10px 20px;
+  margin: 0;
+  color: var(--whiteFFF);
+}
+.attention .attention-content {
+  background-color: var(--whiteFFF);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.attention .attention-content p {
+  font-size: 20px;
+  padding: 20px 10px;
+}
+/*responsive*/
+@media (max-width: 700px) {
+  .Classframe {
+    width: 92%;
+  }
+  .Title {
+    font-size: 28px;
+  }
+  input,
+  .attention .attention-content p {
+    font-size: 18px;
+  }
+  .numEpisodes {
+    font-size: 18px;
+    font-family: "Cairo";
+    color: var(--mainblue);
+  }
+  .attention .attention-title p {
+    font-size: 20px;
+  }
+  .confirmButton {
+    width: 50%;
+  }
+}
+@media (max-width: 520px) {
+  .Title {
+    font-size: 24px;
+  }
+}

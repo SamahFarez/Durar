@@ -1,0 +1,295 @@
+body {
+  background-color: var(--lightgrey);
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* welcome section*/
+.welcome {
+  margin-top: 14vh;
+}
+
+.welcome .welcome_title {
+  text-align: center;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.welcome_elements,
+.eps_elements {
+  width: 90%;
+  margin: 26px auto;
+}
+
+.welcome .main-button {
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--whiteFFF);
+  border: 1px solid var(--mainblue);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--mainblue);
+  transition: background 0.5s ease;
+}
+
+a .main-button:hover {
+  color: var(--whiteFFF);
+  background: var(--mainblue);
+}
+
+.date_place {
+  margin: 26px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*responsive main*/
+@media (max-width: 700px) {
+  .welcome_elements .main-button {
+    font-size: 18px;
+  }
+}
+
+/* 
+ * episodes section
+ */
+
+.eps {
+  width: 100%;
+}
+
+.title {
+  width: 117px;
+  margin: 0 auto;
+}
+
+.title p {
+  display: flex;
+  justify-content: center;
+  width: 117px;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--mainblue);
+  line-height: 80px;
+  border-bottom: 3px solid var(--mainblue);
+}
+
+/*
+ * episode cards
+ */
+
+.eps_elements {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+@media (max-width: 900px) {
+  .eps_elements {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid_element {
+  background-image: url("../../images/Teacher/hala9a\ frame\ bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--mainblue);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  transition: background 1s ease;
+}
+
+.grid_element:hover {
+  background-image: url("../../images/Teacher/\(hovered\)\ hala9a\ frame\ bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid_element .ep_first {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ep_first {
+  padding: 10px 0;
+}
+
+.ep_title {
+  font-family: "Reem Kufi", sans-serif;
+  color: var(--black);
+  font-size: 40px;
+}
+
+.ep_desc {
+  width: 80%;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.ep_genre {
+  padding: 5px 20px;
+  border: 1px solid var(--mainblue);
+  border-radius: 20px;
+}
+
+.ep_cap {
+  font-size: 20px;
+  color: var(--mainblue);
+}
+
+/*responsive episodes section*/
+@media (max-width: 700px) {
+  .title p {
+    font-size: 30px;
+  }
+  .ep_title {
+    font-size: 22px;
+  }
+  .ep_cap {
+    font-size: 18px;
+  }
+}
+
+/*
+ * Timetable
+ */
+
+.timetable_elements {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.day_container {
+  width: 13%;
+}
+
+.day_container .day {
+  text-align: center;
+  align-items: center;
+  background: var(--mainblue);
+  color: var(--whiteFFF);
+  border-radius: 20px;
+}
+
+.day_container .day p {
+  font-size: 20px;
+  line-height: 37px;
+}
+
+.day_container .time {
+  width: 90%;
+  margin: -10px auto 20px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px 10px;
+  background: var(--whiteFFF);
+  /* main blue */
+  border: 1px solid var(--mainblue);
+  border-radius: 20px;
+}
+
+.day_container .time .class {
+  font-family: "Reem Kufi";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--mainblue);
+}
+
+.day_container hr {
+  margin: -10px auto -10px;
+  width: 80%;
+  background: var(--mainblue);
+}
+
+/* Exam */
+
+.nextExams,
+.prevExams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: right;
+  width: 100%;
+  padding: 20px 0;
+  grid-gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .nextExams,
+  .prevExams {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.exam_container {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px 10px;
+  background: var(--whiteFFF);
+  /* main blue */
+  border: 1px solid var(--mainblue);
+  border-radius: 20px;
+  margin: 0 5px;
+}
+
+.exam_container .class {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--mainblue);
+}
+
+.exam_container hr {
+  margin: 10px auto;
+  width: 80%;
+  background: var(--mainblue);
+}
+
+.exam_container .place {
+  margin: 10px 0;
+}
+.exam_container .day p,
+.exam_container .time p {
+  display: inline;
+  text-align: right;
+  align-items: right;
+}
+
+.exam_container .day,
+.exam_container .time {
+  text-align: right;
+  align-items: right;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.exam_container .day .title,
+.exam_container .time .title {
+  font-weight: 500;
+  color: var(--mainblue);
+}

@@ -1,0 +1,72 @@
+/*
+ * welcome
+ */
+
+section {
+   width: 90%;
+   margin: 0 auto;
+}
+
+.technical_info_admin {
+   margin-top: 90px;
+}
+
+.technical_info_admin .elements {
+   width: 50%;
+   padding-top: 5%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.technical_info_admin img {
+   width: 70%;
+}
+
+.technical_info_admin .Head_title {
+   font-family: 'Reem Kufi', sans-serif;
+   color: var(--mainblue);
+   font-size: 70px;
+   position: relative;
+   bottom: 60px;
+}
+
+.technical_info_admin .description {
+   font-size: 26px;
+}
+
+.my_school_main {
+   font-size: 30px;
+}
+
+@media (max-width: 800px) {
+   .technical_info_admin .Head_title {
+      font-size: 50px;
+   }
+
+   .technical_info_admin .description {
+      font-size: 18px;
+   }
+   .admin-main-button {
+      font-size: 18px;
+   }
+}
+
+.welcome .admin-main-button {
+   margin: 10px 0;
+   width: 100%;
+   text-align: center;
+   box-sizing: border-box;
+   align-items: center;
+   padding: 10px 20px;
+   background: var(--whiteFFF);
+   border: 1px solid var(--mainblue);
+   border-radius: 20px;
+   font-weight: 700;
+   color: var(--mainblue);
+   transition: background 0.5s ease;
+ }
+ 
+ a .admin-main-button:hover {
+   color: var(--whiteFFF);
+   background: var(--mainblue);
+ }

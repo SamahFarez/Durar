@@ -1,0 +1,97 @@
+body, html{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.absentTeachersTable {
+    border-spacing: 6px;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.absentTeachersTable th,
+.absentTeachersTable td {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 20px;
+    min-width: 128px;
+}
+
+.absentTeachersTable td {
+    background-color: white;
+    font-weight: 500;
+}
+
+.absentTeachersTable th {
+    background-color: white;
+    color: #0278A8;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .absentTeachersTable th,
+    .absentTeachersTable td {
+    font-size: 16px;
+}
+}
+
+.studentSearchbar-input-form {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    height: 55px;
+}
+
+.studentSearchbar-input {
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'Cairo';
+    border: none;
+    border-radius: inherit;
+    width: 100%;
+}
+
+@media (max-width:700px) {
+    .studentSearchbar-input {
+        font-size: 18px;
+    }
+}
+
+input.studentSearchbar-input {
+    border: none;
+    width: 100%;
+    padding: 10px 37px 10px 50px;
+}
+
+.selection-box {
+    height: 65px;
+    flex: 1;
+    font-family: 'Cairo';
+    color: #F2F2F2;
+    font-size: 24px;
+    background: #1B2342;
+    border-radius: 5px;
+    align-self: stretch;
+    align-items: center;
+    padding: 10px 20px;
+    appearance: none;
+    background-image: url(../../images/icons/arrowDown.png);
+    background-repeat: no-repeat;
+    background-position: center left 5%;
+}
+
+
+.AddHalakah{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+@media (max-width:600px) {
+    .content button p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,393 @@
+#AddAdminOverlay,
+#RemoveAdminOverlay,
+#errorPrivOverlay,
+#AddStudentOverlay,
+#RemoveStudentOverlay,
+#AddTeacherOverlay,
+#RemoveTeacherOverlay,
+#MakeSchoolOverlay,
+#SignUpAdminChooseOverlay,
+#Hala9aSettingsOverlay,
+#editSchoolNameOverlay,
+#editSchoolNumberOverlay,
+#editSchoolEmailOverlay,
+#removeSchoolOverlay,
+#editSchoolCardOverlay,
+#editSchoolCoverOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  /* hide the overlay by default */
+  z-index: 9999;
+  /* make sure the overlay is on top of other elements */
+}
+
+#AddAdminOverlay-content {
+  width: 70%;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(83, 72, 72, 0.871);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--whiteFFF);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+#AddAdminOverlay-content button p {
+  font-size: 18px;
+}
+
+@media (max-width:700px) {
+  #AddAdminOverlay-content {
+    width:92%;
+    font-size: 16px;
+  }
+  #AddAdminOverlay-content button p {
+    font-size: 16px;
+  }
+}
+
+.AddAdminContentAll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  padding: 2vh;
+}
+
+.AddAdminContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  padding: 2vh;
+  width: 100%;
+}
+
+.backButton:hover,
+.confirmButton:hover {
+  background: var(--darkblue);
+  color: var(--whiteFFF);
+  border: 0;
+  transition: background 0.5s ease;
+}
+
+.CardButtons {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.CardButtons>button {
+  border-radius: 20px;
+  line-height: 1;
+  top: 0;
+  padding: 10px 30px;
+  flex-grow: 1;
+  margin: 0px 10px;
+}
+
+.CardButtons>button>p {
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.CardButtons2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  height: 10vh;
+}
+
+.CardButtons2>button {
+  border-radius: 20px;
+  line-height: 1;
+  top: 0;
+  padding: 0px 20px;
+  margin: 0px 10px;
+}
+
+.CardButtons2>button>p {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.CardButtons3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 25vw;
+  margin-top: 10px;
+}
+
+.CardButtons3>button {
+  border-radius: 20px;
+  line-height: 1;
+  top: 0;
+  padding: 0px 20px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.CardButtons3>button>p {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width:700px) {
+  .specialCardButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .CardButtons>button>p {
+    font-size: 18px;
+  }
+}
+
+
+.ButtonDelete{
+  border: 1px solid var(--whiteFFF);
+  background-color: var(--mainblue);
+  color: var(--whiteFFF);
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: 'Cairo';
+  height: 50px;
+  padding: 0 50px;
+  font-size: 16px;
+
+}
+
+.backButton {
+  border: 1px solid var(--mainblue);
+  background-color: var(--whiteFFF);
+  color: var(--mainblue);
+  cursor: pointer;
+}
+
+.confirmButton {
+  border: 1px solid var(--mainblue);
+  background-color: var(--mainblue);
+  color: var(--whiteFFF);
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: 'Cairo';
+  font-size: 16px;
+}
+
+.deleteButton {
+  position: absolute;
+  background-color: var(--whiteFFF);
+  border: none;
+  display: flex;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+
+.addTeacherRow {
+  width: 80%;
+  height: 50px;
+  display: inline-block;
+  background-color: var(--whiteFFF);
+  border-radius: 15px;
+  padding: 10px 15px 5px;
+  margin: 5px;
+}
+
+.saveButton {
+  width: 15%;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px 5px 5px;
+
+}
+
+
+/* Search Bar */
+.searchContainer {
+  display: block;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0px;
+}
+
+/* .searchContainer form {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+
+
+  line-height: 1;
+
+  padding: 10px 30px;
+  flex-grow: 1;
+  margin: 0px 10px;
+} */
+
+/* .searchContainer form:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--black);
+} */
+
+ .searchContainer input[type="text"] {
+  width: 100%;  
+  background-color: var(--whiteFFF);
+  font-size: 16px;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: 'Cairo', sans-serif;
+}
+.searchContainer input[type="text"]:focus {
+  outline: none;
+  border: 1px solid var(--mainblue);
+}
+
+/* .searchContainer input[type="text"]:focus { */
+/* border: 2px solid transparent; */
+/* box-shadow: none; */
+/* border: none !important;
+  outline: none;
+} */
+
+.searchContainer button[type="submit"] {
+  border: none;
+  background-color: var(--whiteFFF);
+  cursor: pointer;
+
+}
+
+
+
+
+/*  */
+
+.AdminInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.AddAdminContentAll>div:not(:first-child) {
+  display: none;
+}
+
+
+
+/* Make school card */
+
+.AddDescriptionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 2vh;
+  width: 100%;
+}
+
+.AddDescriptionContent>p {
+  margin: 0px;
+}
+
+.AddDescriptionContent>input {
+  width: 50vw;
+  height: 25vh;
+  line-height: 30px;
+  margin: 10px 0px;
+}
+
+.CardInputContainer {
+  width: 40vw;
+  height: fit-content;
+  line-height: 30px;
+  margin: 10px 0px;
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid var(--grey);
+  padding: 20px;
+}
+
+
+
+
+.hala9aSettingsChoose {
+  border-radius: 20px;
+  border: none;
+  background-color: var(--whiteFFF);
+  padding: 0px 20px;
+  margin: 0px;
+}
+
+.hala9aSettingsChoose:hover {
+  background-color: var(--lightgrey);
+}
+
+.CardButtons4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.editSchoolCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  width: 100%
+}
+
+.editSchoolCard>section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.editSchoolCard>section>p {
+  color: var(--grey);
+  width: 50%;
+}
+
+.editSchoolCard>section>input {
+  font-family: "Cairo", sans-serif;
+  font-size: 14px;
+  border: none;
+  color: black;
+  width: 50%;
+}

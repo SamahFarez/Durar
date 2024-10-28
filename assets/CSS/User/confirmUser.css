@@ -1,0 +1,162 @@
+.auth_container {
+  width: 60%;
+  margin: 15vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth_container .auth_title {
+  font-family: "Reem Kufi", sans-serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 60px;
+}
+
+.auth_container .header .title {
+  font-size: 28px;
+}
+.auth_container .header .text {
+  font-size: 22px;
+}
+
+.auth_container .code_school {
+  padding: 20px 47px;
+  background: var(--whiteFFF);
+  border: 1px solid var(--mainblue);
+  border-radius: 5px;
+  font-size: 22px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.auth_container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width:700px) {
+  .auth_container {
+    width: 90%;
+  }
+  .auth_container .auth_title {
+    font-size: 28px;
+    text-align: center;
+  }
+  .auth_container .code_school,
+  .auth_container .header .text {
+    font-size: 18px;
+  }
+  .auth_container .header .title {
+    font-size: 22px;
+  }
+  
+}
+
+.otp-bx {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.otp-bx input {
+  box-sizing: border-box;
+  height: 57px;
+  background: var(--whiteFFF);
+  border: 1px solid var(--mainblue);
+  border-radius: 8px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.otp-bx input:focus {
+  outline: none;
+  border: 2px solid var(--darkblue);
+}
+
+.auth_container button {
+  padding: 10px 34px;
+  background: var(--mainblue);
+  border-radius: 20px;
+  font-family: "Cairo";
+  color: var(--whiteFFF);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 45px;
+}
+
+.auth_container button:hover {
+  cursor: pointer;
+}
+
+/*signing up*/
+.all {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--whiteFFF);
+}
+
+.conf .right {
+  justify-content: center;
+  background-color: var(--mainblue);
+  width: 40%;
+  color: var(--whiteFFF);
+  height: 100vh;
+}
+
+.right_elements {
+  text-align: center;
+  width: 60%;
+  margin: 20% auto;
+  display: block;
+}
+
+.conf .left {
+  width: 60%;
+  margin-top: -70px;
+}
+
+@media (max-width:800px) {
+   .conf .right {
+     display: none;
+   }
+ 
+   .conf .left {
+     width: 100%;
+     margin: 0 auto;
+   }
+ }
+
+.return_btn {
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid var(--mainblue);
+  transition: background 0.5s ease;
+  text-decoration: none;
+}
+
+.return_btn:hover {
+  background: var(--darkblue);
+  color: var(--whiteFFF);
+}
+
+select {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  padding: 14px 66px;
+  height: 60px;
+  border: 2px solid var(--mainblue);
+  border-radius: 10px;
+  background-color: var(--whiteFFF);
+  text-align: right;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border: 1px solid var(--darkblue);
+}

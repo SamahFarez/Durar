@@ -1,0 +1,98 @@
+/*
+ * إدارة العمال والطلبة
+ */
+
+
+.add_admin,
+.add_teacher,
+.add_student {
+   margin-top: 10px;
+   background-color: var(--whiteFFF);
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 5px;
+   border: none;
+}
+
+.add_admin .box,
+.add_teacher .box,
+.add_student .box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+}
+
+/* registratipn */
+
+.register_form .question,
+.register_form .question .answer_options {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.register_form .question label {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: 100%;
+   padding: 10px 30px 10px 10px;
+   background: var(--whiteFFF);
+   border-radius: 5px;
+   font-size: 20px;
+}
+
+.register_form .question label p {
+   padding-right: 20px;
+}
+
+.register_form .question input[type=radio] {
+   width: 20px;
+   height: 20px;
+}
+
+.register_form .saving_btn_container {
+   display: flex;
+   flex-direction: row;
+   align-items: flex-end;
+}
+
+.register_form .btn_save {
+   font-family: 'Cairo';
+   color: var(--whiteFFF);
+   font-size: 20px;
+   font-weight: 700;
+   align-items: center;
+   padding: 14px 80px;
+   background-color: var(--mainblue);
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: auto;
+}
+
+.register_form .btn_save:hover {
+   cursor: pointer;
+}
+
+
+.schoolSettingsOption {
+   display: flex;
+   flex-direction: row;
+   gap: 2vw;
+   border: none;
+   background-color: var(--whiteFFF);
+   padding: 10px;
+   font-family: 'Cairo', sans-serif;
+   font-size: 18px;
+}
+
+.schoolSettingsOption > img {
+   max-width: 100%;
+   height: auto;
+   object-fit: contain; /* or object-fit: cover; */
+
+ }

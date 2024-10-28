@@ -1,0 +1,693 @@
+/*
+ * hala9a
+
+ *Note that i put exams CSS here too due to the similarities of design and CSS code
+ */
+
+.teacher-info-sub-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 37px;
+}
+
+.teacher-info-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 45px;
+  color: #0278a8;
+  text-align: right;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.teacher-info-logo-title:active,
+.teacher-info-logo-title:hover {
+  background: #f2f2f2;
+}
+
+.teacher-info-logo-title {
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 11px;
+}
+
+.teacher-info_role {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 37px;
+}
+
+.teacher-info_name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 45px;
+  color: #0278a8;
+}
+
+.line {
+  border: 1px solid #0278a8;
+  width: 80%;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 85px;
+
+  background: #ffffff;
+
+  border: 1px solid #0278a8;
+}
+
+/*resonsive sidebar*/
+@media (max-width: 800px) {
+  .side-bar {
+    position: absolute;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: -2vh;
+    right: 0;
+    width: 70%;
+    margin-right: -80%;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .side-bar.mobile_sidebar {
+    margin-right: 0;
+  }
+}
+
+.sidebar-slider {
+  position: absolute;
+  top: 11vh;
+  right: 1%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media (min-width: 801px) {
+  .side_bar {
+    width: 30%;
+  }
+  .sidebar-slider {
+    display: none;
+  }
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.teacher-info {
+  width: 80%;
+  align-items: right;
+  text-align: right;
+}
+
+.session-3-text {
+  font-style: normal;
+  font-family: "Cairo";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background: #0278a8;
+  border-radius: 5px;
+  padding: 10px 50px;
+}
+
+.session-3 {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px;
+  gap: 10px;
+  justify-content: end;
+}
+
+.studentsTable {
+  text-align: start;
+}
+
+.studentsTable,
+.examsTable,
+.examsTableMulti {
+  border-spacing: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.examTime {
+  border-spacing: 10px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+}
+
+.examTime p {
+  display: inline-block;
+  padding: 10px 40px;
+}
+
+.studentsTable td,
+.studentsTable th,
+.Mean,
+.examsTable th,
+.examsTable td,
+.examsTableMulti th,
+.examsTableMulti td,
+.examTime p {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.MeanNumber {
+  font-family: "Cairo";
+  border-radius: 7px;
+  padding: 10px 30px 10px 10px;
+  height: 60px;
+  background-color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.newExamText {
+  border: 0;
+  font-family: "Cairo";
+  border-radius: 10px;
+  padding: 10px 30px 10px 10px;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  border: 1px solid var(--darkblue);
+}
+
+.MultipleChoices {
+  padding: 0 10px;
+}
+
+.choice {
+  display: block;
+  border-radius: 10px;
+  padding: 15px 30px 5px 10px;
+  height: 60px;
+  background-color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.choiceInput {
+  font-family: "Cairo";
+}
+
+.choice input {
+  margin: 0 0 0 20px;
+}
+
+.newExamDate {
+  display: flex;
+  flex-direction: row;
+}
+
+.studentsTable td,
+.MeanNumber,
+.newExamText,
+.choice {
+  background-color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.examsTable td {
+  height: 80px;
+  background-color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.examsTableMulti td {
+  height: 60px;
+  background-color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.studentsTable th,
+.examsTable th,
+.examsTableMulti th,
+.Mean,
+.examTime p {
+  background: #1b2342;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 37px;
+}
+
+/*responsive next exam*/
+@media (max-width: 600px) {
+  .examTime {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .examTime p {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+}
+
+/*responsive students table*/
+@media (max-width: 700px) {
+  .studentsTable th,
+  .studentsTable td {
+    font-size: 16px;
+    min-width: 128px;
+  }
+}
+
+/*responsive examsTable*/
+@media (max-width: 700px) {
+  .examsTable th,
+  .examsTable td {
+    min-width: 128px;
+    font-size: 16px;
+  }
+  .examsTable {
+    overflow-x: scroll;
+  }
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.increase,
+.decrease {
+  height: 45px;
+  width: 30%;
+  color: var(--mainblue);
+  text-align: center;
+  border: 1px solid var(--mainblue);
+  border-radius: 15px;
+  margin: 15px 5px 5px;
+  padding: auto 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+
+.increase p,
+.decrease p {
+  margin-right: 80px;
+}
+
+.increase img,
+.decrease img {
+  margin-left: 60px;
+  width: 25px;
+}
+
+.examType {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.onsite,
+.multi {
+  height: 50px;
+  width: 50%;
+  color: var(--black);
+  background-color: var(--whiteFFF);
+  text-align: center;
+  border: 1px solid var(--mainblue);
+  border-radius: 15px;
+  margin: 5px 5px;
+  padding: auto 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+}
+
+.onsite:hover,
+.multi:hover {
+  color: white;
+  background-color: var(--mainblue);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.multiExam {
+  display: block;
+}
+
+.studentsList {
+  gap: 10px;
+}
+
+.session-2-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.session-2 {
+  height: 170px;
+  padding: 0.5rem 1rem;
+}
+
+.session-1-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  justify-content: space-around;
+}
+
+.session-1 {
+  display: flex;
+  align-items: center;
+  background-color: #0278a8;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.session {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.text-1 {
+  font-family: "Reem Kufi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 72px;
+}
+
+.text-2 {
+  border: 1px solid #0278a8;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 5px 20px;
+}
+
+.hala9a-num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.newEpisode,
+.newExam {
+  flex: 1;
+  margin-top: 85px;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  .text-1 {
+    font-size: 28px;
+  }
+
+  @media (max-width: 700px) {
+    .studentSearchbar-input {
+      font-size: 18px;
+    }
+  }
+
+  .text-2,
+  .session-1-text,
+  .session-2-text {
+    font-size: 18px;
+  }
+}
+
+.session-3-a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--mainblue);
+}
+
+.studentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.session-3-a-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  gap: 10px;
+  border: 1px solid #0278a8;
+  border-radius: 20px;
+}
+
+.session-3 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.session-5-b {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border: 2px solid #0278a8;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 37px;
+  width: 20%;
+}
+
+.hala9at-hala9a {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  width: 33%;
+  padding: 1.5%;
+}
+
+.hala9at {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 20px;
+  gap: 2%;
+}
+
+.dayProgram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #0278a8;
+  border-radius: 20px;
+  padding: 15px 10px;
+  width: 25%;
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  font-family: "Cairo";
+  font-size: 20px;
+}
+.state_button input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.state_button input:hover {
+  cursor: pointer;
+}
+
+#Sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hala9at-hala9a:hover {
+  cursor: pointer;
+}
+
+/*add exam responsive*/
+.respons_exam {
+  font-family: "Cairo";
+  border-radius: 10px;
+  height: 60px;
+  background-color: var(--whiteFFF);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+@media (max-width: 950px) {
+  .newExamDate {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .respons_exam {
+    width: 100%;
+  }
+}
+
+@media (min-width: 665px) {
+  .exam_date_time {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 665px) {
+  .exam_date_time {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*responsive best learners*/
+.best-learner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.best-learner .category {
+  font-weight: 700;
+  border: 1px solid var(--mainblue);
+  font-size: 20px;
+  padding: 14px 20px;
+  background-color: white;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+.best-learner .data {
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .best-learner {
+    grid-gap: 5px;
+  }
+  .best-learner .category,
+  .best-learner .data {
+    font-size: 16px;
+  }
+}
+
+.session .selection-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+/*responsive stats in school*/
+@media (max-width: 700px) {
+  .session .selection-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .session .selection-form .selection-box,
+  .selection-box {
+    font-size: 16px;
+  }
+}

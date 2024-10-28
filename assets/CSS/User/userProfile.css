@@ -1,0 +1,340 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  margin-top: 85px;
+}
+
+/*
+ * Main content
+ */
+.main_elements {
+  width: 100%;
+}
+
+.panels_container {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0 20px 0;
+}
+
+.panels_container .panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.panels_container .panel .title {
+  background: var(--mainblue);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.panels_container .panel .title p,
+.panels_container .panel .title2 p {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.panels_container .panel .title p {
+  color: var(--whiteFFF);
+}
+
+.panels_container .panel .title2 p {
+  color: var(--mainblue);
+}
+
+.panels_container .panel .content {
+  background-color: var(--whiteFFF);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.panels_container .panel .content .content_element {
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .panels_container {
+    width: 96%;
+  }
+  .panels_container .panel .title p,
+  .panels_container .panel .title2 p {
+    font-size: 18px;
+  }
+  .panels_container td {
+    padding-right: 1rem;
+    font-size: 18px;
+    max-width: 222px;
+    word-wrap: break-word;
+  }
+  .panels_container th {
+    font-size: 18px;
+  }
+}
+@media (min-width: 701px) {
+  .panels_container td,
+  .panels_container th {
+    font-size: 20px;
+  }
+  .panels_container td {
+    padding-right: 2rem;
+  }
+  .panel .content .content_element {
+    font-size: 20px;
+  }
+}
+
+/*
+ * ID and CONTACT data
+ */
+
+.panels_container th {
+  font-weight: 600;
+  color: var(--mainblue);
+}
+
+.panels_container td,
+.panels_container th {
+  text-align: right;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*
+ *  Side bar styling
+ */
+
+@media (min-width: 801px) {
+  .main .side_bar {
+    width: 30%;
+  }
+  .sidebar-slider {
+    display: none;
+  }
+}
+
+/*responsive sidebar*/
+@media (max-width: 800px) {
+  .main_elements {
+    width: 100%;
+    margin-top: 2vh;
+  }
+  .side_bar {
+    position: absolute;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 10vh;
+    right: 0;
+    width: 70%;
+    background-color: rgba(216, 224, 244, 0.9);
+    margin-right: -80%;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .side_bar.mobile_sidebar {
+    margin-right: 0;
+  }
+}
+
+.sidebar-slider {
+  position: absolute;
+  top: 11vh;
+  right: 1%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.main .side_bar {
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--whiteFFF);
+  border: 1px solid var(--mainblue);
+}
+
+/* the profile info */
+
+.sidebar_elements .profile img {
+  margin: 5% 0 2%;
+  width: 50%;
+}
+
+.sidebar_elements .profile .teacher_name {
+  color: var(--mainblue);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+hr {
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  height: 1px;
+  background-color: var(--mainblue);
+}
+
+/* School, Episodes, settings */
+
+.sidebar_elements .sidebar_title {
+  color: var(--mainblue);
+  font-weight: 600;
+  font-size: 24px;
+  margin: 5% 0 2%;
+  padding-right: 8%;
+}
+
+.sidebar_elements .sidebar_links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 12%;
+}
+
+.sidebar_elements .sidebar_links:hover {
+  background-color: var(--lightgrey);
+}
+
+/* section of settings */
+.editable th {
+  color: var(--darkblue);
+}
+
+.panels_container .grid_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px 10px;
+}
+
+.panels_container .grid_container .setting1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.panels_container .grid_container .setting2,
+.panels_container .grid_container .setting3 {
+  text-align: center;
+  background-color: var(--whiteFFF);
+  border: 1px solid var(--mainblue);
+  border-radius: 5px;
+}
+
+/* change password section */
+
+.changePassword .titles {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .changePassword .titles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    white-space: nowrap;
+  }
+  .changePassword input,
+  .changePassword select {
+    width: 100%;
+    margin-top: -20px;
+  }
+  .changePassword .titles p {
+    font-size: 18px;
+  }
+  .material-icons {
+    top: 83px;
+  }
+  .changePasswordButton {
+    font-size: 18px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 800px) {
+  .changePassword .titles p {
+    font-size: 20px;
+  }
+  .changePassword input,
+  .changePassword select {
+    width: 100%;
+  }
+  .changePasswordButton {
+    font-size: 20px;
+    width: 200px;
+  }
+}
+
+.changePassword .titles p {
+  font-weight: 400;
+  line-height: 55px;
+  color: var(--mainblue);
+}
+
+.changePassword input,
+.changePassword select {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  padding: 14px 20px;
+  height: 55px;
+  border: 2px solid #c1c1c1;
+  border-radius: 20px;
+  background-color: var(--whiteFFF);
+}
+
+.changePassword input:focus,
+.changePassword select:focus {
+  outline: none;
+  border: 3px solid var(--mainblue);
+}
+
+.changePassword form {
+  display: grid;
+  row-gap: 7px;
+}
+
+.changePasswordButton {
+  margin-top: 20px;
+  font-family: "Cairo";
+  color: var(--whiteFFF);
+  align-items: center;
+  height: 57px;
+  background: var(--mainblue);
+  border-radius: 5px;
+  font-weight: 700;
+  justify-self: end;
+}
+
+.changePasswordButton:hover {
+  cursor: pointer;
+}
+
+/* sidebar links manipulations using JS */
+.main_elements .main-section {
+  display: block;
+}
+
+.mytextarea {
+  line-height: 1.5;
+  resize: none;
+  border: none;
+  font-family: "Cairo", sans-serif;
+  font-size: 20;
+  line-height: 1;
+  color: var(--black);
+  font-weight: 500;
+  padding: 20px;
+}

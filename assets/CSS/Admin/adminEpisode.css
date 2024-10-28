@@ -1,0 +1,79 @@
+/*ADMIN*/
+.eps_reports .sessions_list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 10px;
+}
+
+.eps_reports .sessions_list .one_session {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px;
+   width: 100%;
+   background-color: var(--whiteFFF);
+   border-radius: 5px;
+}
+
+.eps_reports .sessions_list .one_session .session_title {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 37px;
+   color: var(--mainblue);
+}
+
+.eps_reports .sessions_list .one_session .session_date {
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 37px;
+}
+
+.learning_stats .best_student {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 10px;
+   margin-top: 10px;
+}
+
+.learning_stats .best_student .one_box {
+   width: 100%;
+   background-color: var(--whiteFFF);
+   border-radius: 5px;
+   font-size: 20px;
+   padding: 10px 20px 10px
+}
+
+.learning_stats .best_student .best_student_title {
+   font-weight: 700;
+   font-size: 20px;
+   border: 1px solid var(--mainblue);
+}
+
+.exams_admin .exams_list {
+   display: grid;
+   grid-template-columns: 100%;
+   grid-gap: 10px;
+}
+
+.exams_admin .exams_list .one_row {
+   display: grid;
+   grid-template-columns: 33% 22% 21% 21%;
+   grid-gap: 1%;
+}
+
+.exams_admin .exams_list .box {
+   border-radius: 5px;
+   padding: 10px 20px 10px;
+   width: 100%;
+   background-color: var(--whiteFFF);
+}
+
+.exams_admin .exams_list .head {
+   background-color: var(--darkblue);
+   font-size: 20px;
+   color: var(--whiteFFF);
+   display: flex;
+   align-items: center;
+   font-weight: 600;
+}

@@ -1,0 +1,116 @@
+/*
+ * This file contains styling, 
+ * general classes of all our pages
+ */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+html,
+body {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   overflow-x: hidden;
+}
+
+body {
+   font-family: 'Cairo', sans-serif;
+   font-size: 20;
+   line-height: 1;
+   color: var(--black);
+   font-weight: 500;
+   top: 0;
+   background-color: var(--lightgrey);
+}
+
+button{
+   cursor: pointer;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   white-space: nowrap;
+}
+
+p {
+   line-height: 1.5;
+}
+
+section {
+   margin: 0;
+   padding: 0;
+}
+
+/*Defined Variables*/
+/* Variables */
+:root {
+   --mainblue: #0278A8;
+   --lightgrey: #F2F2F2;
+   --whiteFFF: #FFFFFF;
+   --lightblue: #05A2C6;
+   --grey: #C1C1C1;
+   --gold: #B66D12;
+   --lightgold: #F6C37C;
+   --darkblue: #1B2342;
+   --black: #000000;
+}
+
+/*Defined Classes*/
+.primary-btn {
+   color: var(--whiteFFF);
+   padding: 10px 25px;
+   width: 12%;
+   height: 57px;
+   background: var(--mainblue);
+   border-radius: 30px;
+   transition: background 0.5s ease;
+   text-decoration: none;
+}
+
+.primary-btn:hover {
+   background: var(--darkblue);
+}
+
+.secondary-btn {
+   color: var(--whiteFFF);
+   padding: 10px 25px;
+   width: 12%;
+   height: 57px;
+   background: var(--darkblue);
+   border-radius: 30px;
+   transition: background 0.5s ease;
+   text-decoration: none;
+}
+
+.secondary-btn:hover {
+   background: var(--darkblue);
+}
+
+.third-btn {
+   color: var(--black);
+   padding: 10px 25px;
+   width: 12%;
+   height: 57px;
+   border: 2px solid var(--mainblue);
+   border-radius: 30px;
+   transition: background 0.5s ease;
+   text-decoration: none;
+}
+
+.third-btn:hover {
+   color: var(--whiteFFF);
+   background: var(--darkblue);
+   border: var(--darkblue);
+}
